@@ -6,3 +6,33 @@
 В основном потоке добавьте в очередь пару фамилий и запустите функции в разных потоках.
 """
 
+import queue
+import threading
+
+def add_student(queue):
+    while True:
+        name = input("Введите фамилию студента или 'off' для завершения: ")
+        if name == 'off':
+            break
+        queue.put(name)
+
+def remove_student(queue):
+    while True:
+        if queue.empty():
+            continue
+        name = queue.get()
+        print(f"Студент {name} отчислен")
+
+queue = queue.Queue()
+add_thread = threading.Thread(target=add_student, args=(queue,))
+remove_thread = threading.Thread(target=remove_student, args=(queue,))
+
+add_thread.start()
+remove_thread.start()
+
+add_thread.join()
+remove_thread.join()
+
+
+
+

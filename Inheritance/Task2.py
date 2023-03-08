@@ -4,3 +4,20 @@
 Во втором классе вызовите метод класса родителя и добавьте к выводу надпись "но его отчислят если он не будет учить ООП".
 Создайте экземпляр второго класса с вашим именем и вызовите метод печатающий всю надпись.
 """
+
+class Name():
+    def __init__(self,name):
+        self.name = name
+
+    def genious(self):
+        return self.name+' гений'
+
+
+
+class But(Name):
+    def nuance(self):
+        super().genious()
+        print(super().genious(),',но его отчислят если он не будет учить ООП')
+
+student = But("Никита")
+student.nuance()

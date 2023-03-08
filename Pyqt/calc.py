@@ -1,9 +1,3 @@
-"""
-С помощью Pyqt создайте калькулятор с графическим интерфейсом.
-Приложение должно выполнять: Сложение, вычитание, деление, умножение, возведение в степень, запоминание значения,
-вывод значения из памяти.
-"""
-
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLineEdit, QLabel
 from functools import partial
 import math
@@ -76,5 +70,3 @@ if __name__ == "__main__":
     calculator = Calculator()
     calculator.show()
     app.exec_()
-
-

@@ -93,3 +93,11 @@ characters = {
         }
     }
 }
+
+name = characters["4"]
+print(name)
+
+# Или как вариант
+
+print("Имя персонажа:", list(characters["4"].keys())[0])
+print("Ссылка на персонажа:", list(characters["4"].values())[0])

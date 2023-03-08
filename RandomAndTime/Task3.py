@@ -6,3 +6,22 @@
 1) «Ваш номер: _».
 2) «Участников в первом забеге: _», «Участников во втором забеге: _».
 """
+
+from random import *
+
+def runners():
+    run_1 = 0
+    run_2 = 0
+    start = ''
+    while start != 'off':
+        start = input()
+        num = randint(1, 2)
+        if num == 1:
+            run_1 += 1
+        if num ==2:
+            run_2 += 1
+        print('Ваш номер:', num)
+        print('Участников в первом забеге:',run_1,'Участников во втором забеге:',run_2)
+
+runners()
+

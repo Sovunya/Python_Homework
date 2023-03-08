@@ -3,4 +3,15 @@
 не введет "off". Программа должна вывести всю информацию в виде словаря вида: {(место,испонитель): название трека}
 """
 
-
+track = {}
+i = 0
+while i != 'off':
+    i = input('start or off?')
+    if i != 'off':
+        Place = input('Место в чарте:')
+        Master = input('Исполнитель:')
+        Name = input('Название трека:')
+    else:
+        break
+    track[Place, Master] = Name
+print(track)

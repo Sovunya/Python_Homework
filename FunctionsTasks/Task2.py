@@ -7,3 +7,17 @@
 
 Примечание. Наличие функции является обязательным. Функция должна принимать количество набранных баллов.
 """
+
+def average_grade():
+    grade = int(input('Количество баллов (off-остановить ввод):'))
+    while grade != 'off':
+        if grade >= 0 and grade <= 49:
+            print('«Скидка 10%»')
+        elif grade >= 50 and grade <= 99:
+            print('«Скидка 15%»')
+        elif grade >= 100:
+            print('«Скидка 20%»')
+        else:
+            print('Скидки нет...')
+        grade = int(input('Количество баллов (off-остановить ввод):'))
+average_grade()

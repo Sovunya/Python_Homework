@@ -4,3 +4,16 @@
 от 18.5 до 25 "ИМТ в норме", больше 25 "Избыточный вес".
 Формула определения ИМТ: index = weight / (height * height)
 """
+
+def imt():
+    print('Введите ваши параметры')
+    weight = int(input('Вес:'))
+    height = int(input('Рост:'))
+    reshenie = weight / (height * height)
+    if reshenie <= 18.5:
+        print("Недостаточный вес")
+    elif reshenie >= 18.5 and reshenie <= 25:
+        print("ИМТ в норме")
+    else:
+        print("Избыточный вес")
+imt()

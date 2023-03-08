@@ -4,3 +4,9 @@
 Имя компьютера - ХХХ
 Имя пользователя - ХХХ
 """
+
+import os
+
+print('Операционная система - ', os.environ.get('OS'))
+print('Имя компьютера - ', os.environ.get('COMPUTERNAME'))
+print('Имя пользователя - ', os.environ.get('USERNAME'))

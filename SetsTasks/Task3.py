@@ -7,3 +7,6 @@
 newspaper = range(1, 76)
 magazine = range(77, 104)
 both = range(21, 34)
+
+Z = len(newspaper)-len(both)+len(magazine)
+print(Z)

@@ -3,3 +3,10 @@
 а в качестве значения количество этих цифр в строке
 """
 numbers = "0139412831055230677798"
+
+dict1 = {}
+for num in set(numbers):
+    dict1[num] = 0
+for num in numbers:
+    dict1[num] += 1
+print(dict1)

@@ -5,5 +5,13 @@
 Подсказка: чтобы узнать тип элемента можно использовать функцию type()
 """
 testList = [1,2,2,[3,4],(1,2,3),"1",{1,2,3}]
-printSet = set()
+printset = []
 
+flag = True
+for i in testList:
+    if type(i) == list or type(i) == dict or type(i) == set:
+        flag = False
+        continue
+    else:
+        printset.append(i)
+print(printset)
