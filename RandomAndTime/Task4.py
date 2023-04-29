@@ -7,3 +7,26 @@
 3) Спустя 2 или 10 минут печатать новое сообщение: «Возвращайтесь на поле!»
 Дабы не ждать 2 и 10 минут сделайте 2 и 10 секунд.
 """
+
+from time import *
+
+
+def ban():
+    print('Удалить с поля?')
+    start = input()
+    if 'д' in start.lower() or 'y' in start.lower():
+        print('На какое время?')
+        global bantime
+        global timeconv
+        bantime = int(input())
+        timeconv = bantime * 60
+        timer()
+    else:
+        print('Досвидания')
+
+def timer():
+    print(f'«Вы удалена с поля на {bantime} минут(-ы)')
+    sleep(timeconv)
+    print('Возвращайтесь на поле!')
+
+ban()
